@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MyPet - Plataforma moderna dedicada a promover la adopción responsable de mascotas. No compres una vida, cámbiala para siempre. Adopta perros y gatos que buscan un hogar amoroso.">
+    <meta name="keywords" content="adopción de mascotas, adoptar perro, adoptar gato, refugio de animales, adopción responsable, MyPet">
+    <meta name="author" content="MyPet Inc.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mypet-adopcion.org/">
+    <meta property="og:title" content="MyPet | Adopción Responsable de Mascotas">
+    <meta property="og:description" content="Encuentra a tu compañero ideal y dale una segunda oportunidad. Una experiencia de adopción moderna, segura y llena de amor.">
+    <meta property="og:image" content="img/hero-pet.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mypet-adopcion.org/">
+    <meta property="twitter:title" content="MyPet | Adopción Responsable de Mascotas">
+    <meta property="twitter:description" content="Encuentra a tu compañero ideal y dale una segunda oportunidad. Una experiencia de adopción moderna, segura y llena de amor.">
+    <meta property="twitter:image" content="img/hero-pet.png">
+
+    <title>MyPet | Adopción Responsable de Mascotas Premium</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+
+    <!-- Google Fonts: Outfit (Geometric Modern), Inter (UI & Body), Playfair Display (Editorial Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Floating Donation Action Button -->
+    <button class="fab-donation" id="fabDonation" aria-label="Hacer una donación para apoyar a las mascotas" title="Donar Amor">
+        <i class="fa-solid fa-heart"></i>
+        <span class="fab-text">Donar</span>
+    </button>
+
+    <!-- Header / Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Página de inicio de MyPet">
+                <span class="logo-icon">🐾</span>
+                <span class="logo-text">My<span>Pet</span></span>
+            </a>
+            
+            <nav class="navbar" id="mainNavbar">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active">Inicio</a></li>
+                    <li><a href="#story" class="nav-link">Nuestra Historia</a></li>
+                    <li><a href="#gallery" class="nav-link">Adoptar</a></li>
+                    <li><a href="#benefits" class="nav-link">Beneficios</a></li>
+                    <li><a href="#testimonials" class="nav-link">Historias</a></li>
+                    <li><a href="#footer" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#gallery" class="btn-nav btn-secondary-outline">Adoptar</a>
+                <button class="btn-nav btn-primary-orange" id="btnHeaderDonate">Donar</button>
+            </div>
+
+            <!-- Hamburger Button for Mobile Menu -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mainNavbar" aria-label="Abrir menú de navegación">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="hero-bg-container">
+                <img src="img/hero-pet.png" alt="Cachorro dorado mirando fijamente con ojos llenos de esperanza" class="hero-bg-img">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content-container">
+                <span class="hero-tagline scroll-anim" data-anim="fade-up">🐾 Adoptar es salvar una vida</span>
+                <h1 class="hero-title scroll-anim" data-anim="fade-up" data-delay="100">
+                    No compres una vida.<br>
+                    <span class="serif-italic">Cámbiala para siempre.</span>
+                </h1>
+                <p class="hero-subtitle scroll-anim" data-anim="fade-up" data-delay="200">
+                    Cientos de compañeros leales esperan en nuestros refugios por una segunda oportunidad para llenarte de amor incondicional, lealtad y felicidad.
+                </p>
+                <div class="hero-cta-group scroll-anim" data-anim="fade-up" data-delay="300">
+                    <a href="#gallery" class="btn-hero btn-orange-glowing">
+                        <span>Adopta ahora</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#story" class="btn-hero btn-glassmorphic">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Nuestra historia</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-scroll-indicator">
+                <span class="scroll-dot"></span>
+            </div>
+        </section>
+
+        <!-- Emotional Story Section -->
+        <section class="story-section" id="story">
+            <div class="section-container">
+                <div class="grid-story">
+                    <!-- Text Content -->
+                    <div class="story-text-column scroll-anim" data-anim="fade-right">
+                        <span class="section-badge">Nuestra Misión</span>
+                        <h2 class="section-title">
+                            Una mirada que busca <br>
+                            <span class="accent-text text-gradient">un hogar cálido</span>
+                        </h2>
+                        
+                        <p class="story-highlight-paragraph">
+                            Detrás de cada mascota en un refugio hay una historia de supervivencia, silencio y una infinita capacidad de dar amor que aún no ha sido descubierta.
+                        </p>
+                        
+                        <p class="story-body-paragraph">
+                            Creemos firmemente que el amor no se compra. Cada año, millones de perros y gatos sanos y cariñosos terminan en refugios esperando una oportunidad. En **MyPet** hemos creado un puente tecnológico y emocional para conectar a estas almas extraordinarias con familias comprometidas con una adopción consciente y responsable.
+                        </p>
+
+                        <div class="story-quote-block">
+                            <span class="quote-icon">“</span>
+                            <p class="quote-text">
+                                Adoptar no solo cambia la realidad de una mascota; transforma por completo la energía y el amor de un hogar.
+                            </p>
+                            <span class="quote-author">— Dra. Amanda Silva, Psicóloga Animal</span>
+                        </div>
+                    </div>
+
+                    <!-- Visual Column -->
+                    <div class="story-visual-column scroll-anim" data-anim="fade-left">
+                        <div class="image-interactive-wrapper">
+                            <img src="img/adoption.png" alt="Mujer abrazando tiernamente a un perro rescatado" class="story-featured-img">
+                            
+                            <!-- Overlapping Glassmorphism Card -->
+                            <div class="floating-story-card backdrop-blur">
+                                <div class="card-icon-container">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div class="card-info">
+                                    <span class="card-number">10K+</span>
+                                    <span class="card-label">Corazones Unidos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Pet Gallery Section -->
+        <section class="gallery-section" id="gallery">
+            <div class="section-container">
+                <div class="section-header-center scroll-anim" data-anim="fade-up">
+                    <span class="section-badge">Elige el Amor</span>
+                    <h2 class="section-title">Conoce a tu nuevo mejor amigo</h2>
+                    <p class="section-subtitle">
+                        Ellos ya están listos para entregarte su lealtad eterna. Haz clic en sus perfiles para conocer sus hermosas personalidades.
+                    </p>
+                </div>
+
+                <!-- Gallery Filters -->
+                <div class="gallery-filters scroll-anim" data-anim="fade-up" data-delay="100">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fa-solid fa-border-all"></i>
+                        <span>Todos</span>
+                    </button>
+                    <button class="filter-btn" data-filter="dog">
+                        <i class="fa-solid fa-dog"></i>
+                        <span>Perros</span>
+                    </button>
+                    <button class="filter-btn" data-filter="cat">
+                        <i class="fa-solid fa-cat"></i>
+                        <span>Gatos</span>
+                    </button>
+                </div>
+
+                <!-- Pet Grid -->
+                <div class="pet-grid scroll-anim" data-anim="fade-up" data-delay="200" id="petGrid">
+                    
+                    <!-- Pet Card 1 (Dog) -->
+                    <article class="pet-card" data-category="dog" data-id="1">
+                        <div class="card-img-container">
+                            <img src="img/dog1.png" alt="Luna, una perrita Golden Retriever feliz esperando adopción" loading="lazy" class="pet-card-img">
+                            <div class="card-img-overlay"></div>
+                            <span class="card-badge badge-popular">🐾 Más Popular</span>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-header-row">
+                                <h3 class="pet-name">Luna</h3>
+                                <span class="pet-age">2 años</span>
+                            </div>
+                            <div class="pet-meta-info">
+                                <span class="meta-tag"><i class="fa-solid fa-dna"></i> Golden Retriever</span>
+                                <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> Esterilizada</span>
+                            </div>
+                            <p class="pet-description">
+                                Dulce, sumamente cariñosa y llena de vitalidad. Le encanta jugar en el jardín y es excelente con los niños pequeños.
+                            </p>
+                            <div class="pet-footer-row">
+                                <div class="personality-tags">
+                                    <span class="personality-tag">Juguetona</span>
+                                    <span class="personality-tag">Cariñosa</span>
+                                </div>
+                                <button class="btn-card-adopt btn-primary-orange" onclick="openAdoptionModal('Luna', 'dog1.png', 'Golden Retriever')">
+                                    <span>Adoptar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pet Card 2 (Cat) -->
+                    <article class="pet-card" data-category="cat" data-id="2">
+                        <div class="card-img-container">
+                            <img src="img/cat1.png" alt="Oliver, un dulce gato atigrado durmiendo al sol" loading="lazy" class="pet-card-img">
+                            <div class="card-img-overlay"></div>
+                            <span class="card-badge badge-new">✨ Recién Llegado</span>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-header-row">
+                                <h3 class="pet-name">Oliver</h3>
+                                <span class="pet-age">1 año</span>
+                            </div>
+                            <div class="pet-meta-info">
+                                <span class="meta-tag"><i class="fa-solid fa-dna"></i> Mestizo Común</span>
+                                <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> Vacunado</span>
+                            </div>
+                            <p class="pet-description">
+                                Curioso, mimoso y un poco tímido al principio. Disfruta de la tranquilidad, ronronear y dormir largas siestas bajo el sol.
+                            </p>
+                            <div class="pet-footer-row">
+                                <div class="personality-tags">
+                                    <span class="personality-tag">Tranquilo</span>
+                                    <span class="personality-tag">Curioso</span>
+                                </div>
+                                <button class="btn-card-adopt btn-primary-orange" onclick="openAdoptionModal('Oliver', 'cat1.png', 'Mestizo Común')">
+                                    <span>Adoptar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pet Card 3 (Dog - reuse hero / adoption elements creatively) -->
+                    <article class="pet-card" data-category="dog" data-id="3">
+                        <div class="card-img-container">
+                            <img src="img/hero-pet.png" alt="Toby, un cachorro esperando una familia" loading="lazy" class="pet-card-img">
+                            <div class="card-img-overlay"></div>
+                            <span class="card-badge badge-urgent">❤️ Urgente</span>
+                        </div>
+                        <div class="card-details">
+                            <div class="card-header-row">
+                                <h3 class="pet-name">Toby</h3>
+                                <span class="pet-age">5 meses</span>
+                            </div>
+                            <div class="pet-meta-info">
+                                <span class="meta-tag"><i class="fa-solid fa-dna"></i> Mestizo Labrador</span>
+                                <span class="meta-tag"><i class="fa-solid fa-shield-halved"></i> Microchip</span>
+                            </div>
+                            <p class="pet-description">
+                                Una bola de energía pura y diversión. Busca una familia activa dispuesta a enseñarle trucos y pasear largas horas.
+                            </p>
+                            <div class="pet-footer-row">
+                                <div class="personality-tags">
+                                    <span class="personality-tag">Energético</span>
+                                    <span class="personality-tag">Sociable</span>
+                                </div>
+                                <button class="btn-card-adopt btn-primary-orange" onclick="openAdoptionModal('Toby', 'hero-pet.png', 'Mestizo Labrador')">
+                                    <span>Adoptar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits of Adopting Section -->
+        <section class="benefits-section" id="benefits">
+            <div class="section-container">
+                <div class="section-header-center scroll-anim" data-anim="fade-up">
+                    <span class="section-badge">¿Por qué adoptar?</span>
+                    <h2 class="section-title">El impacto de abrir tu corazón</h2>
+                    <p class="section-subtitle">
+                        La adopción no solo salva una vida indefensa; aporta innumerables beneficios científicos y emocionales a tu propio bienestar.
+                    </p>
+                </div>
+
+                <div class="grid-benefits">
+                    
+                    <!-- Benefit 1 -->
+                    <div class="benefit-card scroll-anim" data-anim="fade-up" data-delay="100">
+                        <div class="benefit-icon-wrapper text-gradient-orange">
+                            <i class="fa-solid fa-face-smile-beam"></i>
+                        </div>
+                        <h3 class="benefit-title">Felicidad y Salud Mental</h3>
+                        <p class="benefit-text">
+                            Estudios demuestran que acariciar y convivir con una mascota reduce drásticamente el cortisol (hormona del estrés) y aumenta la producción de endorfinas.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 2 -->
+                    <div class="benefit-card scroll-anim" data-anim="fade-up" data-delay="200">
+                        <div class="benefit-icon-wrapper text-gradient-blue">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <h3 class="benefit-title">Salvar una Vida Real</h3>
+                        <p class="benefit-text">
+                            Le das una segunda oportunidad a un ser vivo que ha sufrido el frío, el hambre o el abandono. Liberas un espacio vital en el refugio para salvar a otro.
+                        </p>
+                    </div>
+
+                    <!-- Benefit 3 -->
+                    <div class="benefit-card scroll-anim" data-anim="fade-up" data-delay="300">
+                        <div class="benefit-icon-wrapper text-gradient-green">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h3 class="benefit-title">Conexión Incondicional</h3>
+                        <p class="benefit-text">
+                            Los animales adoptados desarrollan un lazo de gratitud y lealtad inquebrantable con sus rescatistas. Es un amor sin límites ni condiciones.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="section-container">
+                <div class="section-header-center scroll-anim" data-anim="fade-up">
+                    <span class="section-badge">Historias de Éxito</span>
+                    <h2 class="section-title">Testimonios que inspiran el alma</h2>
+                    <p class="section-subtitle">
+                        Conoce a algunas de las familias que decidieron dar el paso y cómo su realidad se llenó de luz y felicidad.
+                    </p>
+                </div>
+
+                <div class="testimonials-carousel scroll-anim" data-anim="fade-up" data-delay="200">
+                    <div class="carousel-container" id="carouselContainer">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card backdrop-blur">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "Adoptar a Milo cambió nuestras vidas por completo. Llegó tímido, pero hoy es el alma de la casa. El proceso en MyPet fue súper transparente y seguro. Sentimos que fue el destino."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="img/happy-family.png" alt="Familia Gómez, adoptantes felices de Milo">
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Familia Gómez y Milo</h4>
+                                    <span class="author-meta">Adoptaron hace 1 año</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card backdrop-blur">
+                            <div class="testimonial-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="testimonial-text">
+                                "La mejor decisión que he tomado en mi vida. Kira me acompaña en mis mañanas de trabajo y caminatas. La conexión emocional fue inmediata, no me imagino mis días sin ella."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar">
+                                    <img src="img/adoption.png" alt="Carlos, adoptante de Kira">
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Carlos y Kira</h4>
+                                    <span class="author-meta">Adoptaron hace 6 meses</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="control-btn prev-btn" id="prevTestimonial" aria-label="Testimonio anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-dots" id="carouselDots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button class="control-btn next-btn" id="nextTestimonial" aria-label="Siguiente testimonio">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animated Statistics Section -->
+        <section class="stats-section" id="stats">
+            <!-- Background Shelter image with deep parallax overlay -->
+            <div class="stats-bg-container">
+                <img src="img/shelter.png" alt="Interior moderno y cálido del santuario MyPet" class="stats-bg-img">
+                <div class="stats-overlay"></div>
+            </div>
+            
+            <div class="section-container">
+                <div class="grid-stats">
+                    
+                    <!-- Stat 1 -->
+                    <div class="stat-item scroll-anim" data-anim="fade-up" data-delay="100">
+                        <div class="stat-icon-wrapper">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+                        <span class="stat-number" data-target="2450">0</span>
+                        <span class="stat-label">Mascotas Rescatadas</span>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="stat-item scroll-anim" data-anim="fade-up" data-delay="200">
+                        <div class="stat-icon-wrapper">
+                            <i class="fa-solid fa-house-chimney-heart"></i>
+                        </div>
+                        <span class="stat-number" data-target="2120">0</span>
+                        <span class="stat-label">Familias Felices</span>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="stat-item scroll-anim" data-anim="fade-up" data-delay="300">
+                        <div class="stat-icon-wrapper">
+                            <i class="fa-solid fa-hand-holding-hand"></i>
+                        </div>
+                        <span class="stat-number" data-target="45">0</span>
+                        <span class="stat-label">Refugios Asociados</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Emotional CTA Section -->
+        <section class="final-cta-section" id="final-cta">
+            <div class="cta-gradient-wave"></div>
+            <div class="section-container">
+                <div class="cta-inner-card backdrop-blur scroll-anim" data-anim="zoom-in">
+                    <span class="cta-pretitle">🐾 Tu decisión importa</span>
+                    <h2 class="cta-title">
+                        Ellos no pueden elegir su pasado,<br>
+                        <span class="serif-italic text-gradient-orange">pero tú puedes decidir su futuro.</span>
+                    </h2>
+                    <p class="cta-text">
+                        Sé parte del cambio. Si no puedes adoptar en este momento, puedes apoyar financieramente nuestros rescates y tratamientos médicos a través de una donación segura.
+                    </p>
+                    <div class="cta-buttons-row">
+                        <a href="#gallery" class="btn-cta btn-primary-orange">
+                            <span>Quiero Adoptar</span>
+                            <i class="fa-solid fa-house-laptop"></i>
+                        </a>
+                        <button class="btn-cta btn-secondary-outline" id="btnFinalDonate">
+                            <span>Hacer una Donación</span>
+                            <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Premium -->
+    <footer class="main-footer" id="footer">
+        <div class="footer-top-container">
+            <div class="grid-footer">
+                
+                <!-- Brand Profile -->
+                <div class="footer-brand scroll-anim" data-anim="fade-up">
+                    <a href="#" class="logo">
+                        <span class="logo-icon">🐾</span>
+                        <span class="logo-text">My<span>Pet</span></span>
+                    </a>
+                    <p class="brand-desc">
+                        Plataforma líder en adopción de mascotas responsable. Promovemos el bienestar animal, el rescate humanitario y la unión familiar.
+                    </p>
+                    <div class="social-links-row">
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Seguir a MyPet en Instagram" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Seguir a MyPet en Facebook" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Seguir a MyPet en Twitter" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="Canal de YouTube de MyPet" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Fast Navigation Links -->
+                <div class="footer-links-col scroll-anim" data-anim="fade-up" data-delay="100">
+                    <h4 class="footer-title">Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#story"><i class="fa-solid fa-chevron-right"></i> Quiénes Somos</a></li>
+                        <li><a href="#gallery"><i class="fa-solid fa-chevron-right"></i> Mascotas Disponibles</a></li>
+                        <li><a href="#benefits"><i class="fa-solid fa-chevron-right"></i> Cómo Funciona</a></li>
+                        <li><a href="#testimonials"><i class="fa-solid fa-chevron-right"></i> Casos de Éxito</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-links-col scroll-anim" data-anim="fade-up" data-delay="200">
+                    <h4 class="footer-title">Contacto de Ayuda</h4>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Av. Valle Sagrado 450, Ciudad de la Esperanza</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+56912345678">+56 9 1234 5678</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:hola@mypet-adopcion.org">hola@mypet-adopcion.org</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Lunes a Sábado: 9:00 - 18:00 hrs</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Subscription Column -->
+                <div class="footer-newsletter scroll-anim" data-anim="fade-up" data-delay="300">
+                    <h4 class="footer-title">Únete a la Manada</h4>
+                    <p class="newsletter-text">
+                        Suscríbete a nuestro boletín semanal para recibir historias emotivas, consejos de crianza y alertas de nuevas adopciones.
+                    </p>
+                    <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+                        <div class="input-group">
+                            <label for="newsletterEmail" class="sr-only">Correo electrónico para newsletter</label>
+                            <input type="email" id="newsletterEmail" placeholder="Tu correo electrónico" required class="input-field" aria-label="Ingresa tu correo electrónico">
+                            <button type="submit" class="btn-submit" aria-label="Suscribirse">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        <div class="form-feedback" id="newsletterFeedback"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom-container">
+            <p class="copyright-text">
+                &copy; 2026 MyPet. Todos los derechos reservados. Hecho con ❤️ y conciencia animal.
+            </p>
+            <div class="footer-meta-links">
+                <a href="#">Políticas de Privacidad</a>
+                <span>|</span>
+                <a href="#">Términos de Servicio</a>
+                <span>|</span>
+                <a href="#" aria-label="Declaración de Accesibilidad Web">Accesibilidad WCAG AA</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL: Adoption Request Form -->
+    <div class="modal-overlay" id="adoptionModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card backdrop-blur">
+            <button class="modal-close-btn" id="closeAdoptionModal" aria-label="Cerrar modal de adopción">&times;</button>
+            <div class="modal-split">
+                <!-- Modal Info Image Side -->
+                <div class="modal-image-side">
+                    <img id="modalPetImage" src="" alt="">
+                    <div class="modal-image-overlay">
+                        <span class="modal-pet-breed" id="modalPetBreed"></span>
+                        <h4 class="modal-pet-name" id="modalPetName"></h4>
+                    </div>
+                </div>
+                <!-- Modal Form Side -->
+                <div class="modal-form-side">
+                    <h3 id="modalTitle" class="modal-title">Formulario de Solicitud de Adopción</h3>
+                    <p class="modal-desc">
+                        Estás a un paso de cambiar una vida. Rellena los datos para coordinar una entrevista de adopción.
+                    </p>
+                    
+                    <form id="adoptionRequestForm" onsubmit="handleAdoptionFormSubmit(event)">
+                        <input type="hidden" id="selectedPetInput" name="pet_name">
+                        
+                        <div class="form-group">
+                            <label for="adopterName" class="form-label">Nombre Completo *</label>
+                            <input type="text" id="adopterName" required class="form-control" placeholder="Ej. Sofía Valenzuela">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="adopterEmail" class="form-label">Correo Electrónico *</label>
+                            <input type="email" id="adopterEmail" required class="form-control" placeholder="Ej. sofia@ejemplo.com">
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="adopterPhone" class="form-label">Celular / Teléfono *</label>
+                                <input type="tel" id="adopterPhone" required class="form-control" placeholder="Ej. +56998765432">
+                            </div>
+                            <div class="form-group">
+                                <label for="hasExperience" class="form-label">¿Tienes otras mascotas? *</label>
+                                <select id="hasExperience" class="form-control" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="si">Sí, tengo actualmente</option>
+                                    <option value="tuve">Tuve en el pasado</option>
+                                    <option value="no">No, sería la primera</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adopterReason" class="form-label">¿Por qué deseas adoptar a esta mascota? *</label>
+                            <textarea id="adopterReason" rows="3" required class="form-control" placeholder="Cuéntanos un poco sobre tu hogar, estilo de vida y amor por los animales..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-modal-submit btn-primary-orange">
+                            <span>Enviar Solicitud de Adopción</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE MODAL: Donation Form -->
+    <div class="modal-overlay" id="donationModal" role="dialog" aria-modal="true" aria-labelledby="donationModalTitle">
+        <div class="modal-card backdrop-blur modal-small">
+            <button class="modal-close-btn" id="closeDonationModal" aria-label="Cerrar modal de donación">&times;</button>
+            <div class="modal-donation-content">
+                <div class="donation-header">
+                    <div class="donation-icon"><i class="fa-solid fa-heart-circle-bolt"></i></div>
+                    <h3 id="donationModalTitle" class="modal-title">Apoya con tu Donación</h3>
+                    <p class="modal-desc">
+                        Tu aporte financiero ayuda a financiar operaciones quirúrgicas, alimentos premium de calidad y el rescate de más mascotas heridas.
+                    </p>
+                </div>
+
+                <!-- Fast Donation Option Select -->
+                <div class="donation-amounts-grid">
+                    <button class="amount-btn active" data-amount="10">$10 USD</button>
+                    <button class="amount-btn" data-amount="25">$25 USD</button>
+                    <button class="amount-btn" data-amount="50">$50 USD</button>
+                    <button class="amount-btn" data-amount="custom">Otro</button>
+                </div>
+
+                <form id="donationForm" onsubmit="handleDonationSubmit(event)">
+                    <!-- Custom Amount Input Hidden by Default -->
+                    <div class="form-group d-none" id="customAmountGroup">
+                        <label for="customDonationAmount" class="form-label">Ingresa el monto (USD) *</label>
+                        <input type="number" id="customDonationAmount" class="form-control" placeholder="Ej. 100" min="5">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donorEmail" class="form-label">Correo Electrónico *</label>
+                        <input type="email" id="donorEmail" required class="form-control" placeholder="Ej. tuemail@ejemplo.com">
+                    </div>
+
+                    <!-- Payment Methods representation -->
+                    <div class="payment-methods">
+                        <span class="payment-title">Método de Pago Seguro</span>
+                        <div class="payment-icons-row">
+                            <span class="pay-icon active" data-method="card"><i class="fa-regular fa-credit-card"></i> Tarjeta</span>
+                            <span class="pay-icon" data-method="paypal"><i class="fa-brands fa-paypal"></i> PayPal</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-modal-submit btn-primary-orange">
+                        <span>Proceder al Pago Seguro</span>
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER (For Premium Feedback Alerts) -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Custom Script -->
+    <script src="js/app.js"></script>
+</body>
+</html>
